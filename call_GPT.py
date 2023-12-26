@@ -13,29 +13,39 @@ def read_file(file_name):
         return f.read()
 
 
+def save_file(file_name, text):
+    with open(file_name, "w") as f:
+        f.write(text)
+
+
 def call_chat_gpt(
     model=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301"][2],
     prompt="",
 ):
-    max_tokens = 4096
+    # max_tokens = 4096
     completion = client.chat.completions.create(
         model=model,
-        prompt=prompt,
-        temperature=0,
-        max_tokens=max_tokens,
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+        # temperature=0,
+        # max_tokens=max_tokens,
         n=1,
     )
-    return completion.choices[0].text
+
+    return completion.choices[0].message.content
 
 
-def analyze_num_tokens(gpt_input):
+def analyze_num_tokens(gpt_input, is_GPT35Turbo=False):
     num_tok = get_number_of_tokens(gpt_input)
-    print(f"Nombre de tokens: {num_tok}, estimated cost is {num_tok * 0.00001} $")
-
-
-# ======================= MAIN =======================
-
-script = read_file(file_name)
+    if is_GPT35Turbo:
+        cost = num_tok * 0.000001
+    else:
+        cost = num_tok * 0.00001
+    print(f"Nombre de tokens: {num_tok}, estimated cost is {cost} $")
 
 
 ma_prompt = f"""
@@ -79,18 +89,20 @@ Important ! :  Le réponse comporte le maximum d'éléments du script possible, 
 
 Fin de l'instruction. Voici le script : """
 
+# ======================= MAIN =======================
 
-gpt_input = ma_prompt + "Nom du script : /n " + file_name + " /n Script : " + script
+if __name__ == "__main__":
+    script = read_file(file_name)
 
+    gpt_input = ma_prompt + "Nom du script : /n " + file_name + " /n Script : " + script
 
-analyze_num_tokens(gpt_input)
+    analyze_num_tokens(gpt_input)
 
+    result = call_chat_gpt(model="gpt-4-1106-preview", prompt=gpt_input)
 
-result = call_chat_gpt(model="gpt-4-1106-preview", prompt=gpt_input)
+    # sauvegarde la sortie dans un fichier dans le dossier resultat_final. Le nom du fichier depend de la date et de l'heure
+    now = datetime.datetime.now()
+    with open(f"./resultat_final/{now.strftime('%Y-%m-%d_%H-%M-%S')}.md", "w") as file:
+        file.write(+"\n " + ma_prompt)
 
-# sauvegarde la sortie dans un fichier dans le dossier resultat_final. Le nom du fichier depend de la date et de l'heure
-now = datetime.datetime.now()
-with open(f"./resultat_final/{now.strftime('%Y-%m-%d_%H-%M-%S')}.md", "w") as file:
-    file.write(+"\n " + ma_prompt)
-
-print("resultat sauvegardé dans le dossier resultat_final")
+    print("resultat sauvegardé dans le dossier resultat_final")
