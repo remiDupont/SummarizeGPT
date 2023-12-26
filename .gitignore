@@ -1,0 +1,6 @@
+
+# Ignoring folders 'download', 'transcriptions', and 'resultat_final'
+
+download/
+transcriptions/
+resultat_final/
