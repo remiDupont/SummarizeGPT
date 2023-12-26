@@ -1,3 +1,4 @@
+""" File to call chatGPT4 to make summary of a script """
 from token_counter import get_number_of_tokens
 from openai import OpenAI
 import datetime
