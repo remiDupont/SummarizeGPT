@@ -1,3 +1,20 @@
+supported_extensions = [
+    "flac",
+    "m4a",
+    "mp3",
+    "mp4",
+    "mpeg",
+    "mpga",
+    "oga",
+    "ogg",
+    "wav",
+    "webm",
+    ".mp4",
+    ".mkv",
+    ".avi",
+]
+
+
 ma_prompt_cascade = f"""
 Tu es un assistant scientifique qui me prépare une note extrèmement detaillée au format markdown texte fourni.
 Avec cette note, je comprends en detail les conseils donnés dans le texte et je peux tous les appliquer dans ma vie de tous les jours, sans exceptions.

@@ -2,21 +2,24 @@ import whisper
 import os
 import time
 from token_counter import get_number_of_tokens
+import argparse
 
-model_name = ["tiny", "small", "medium"][2]  
+model_name = ["tiny", "small", "medium"][2]
+
 
 def couper_txt_en_segments(texte, n):
     text_list = texte.split()
     num_words = len(text_list)
     num_worlds_per_segment = num_words / n
 
-    idx_list = [int(num_worlds_per_segment*i) for i in range(n) ] + [num_words]
+    idx_list = [int(num_worlds_per_segment * i) for i in range(n)] + [num_words]
     result_list = []
-    
+
     for i in range(n):
-        result_list.append(" ".join(text_list[idx_list[i]:idx_list[i+1]]))
+        result_list.append(" ".join(text_list[idx_list[i] : idx_list[i + 1]]))
 
     return result_list
+
 
 def isvideo(file_path):
     return (
@@ -32,6 +35,7 @@ def extract_audio(file_path):
 
     # Écrire la transcription dans le fichier
     os.system(f"ffmpeg -i {file_path} -y -ab 160k -ac 2 -ar 44100 -vn {output_file}")
+    os.remove(file_path)
     return output_file
 
 
@@ -47,6 +51,7 @@ def transcribe_media(file_path):
 
     # Transcrire l'audio
     return model.transcribe(file_path, verbose=True)["text"]
+
 
 def get_destination_name(file_path):
     # Obtenir le chemin de base et le nom du fichier sans extension
@@ -88,9 +93,16 @@ def mainTranscribe(file_path):
 
 
 # Spécifier le chemin de votre fichier audio
-file_path = "/Users/remi/Desktop/DavidLaroche/Entraine pour reussir/EPR-28-S5-1-TriadeSante.mp3"
+# def main(media_path):
+#     # file_path = "/Users/remi/Desktop/DavidLaroche/Entraine pour reussir/EPR-28-S5-1-TriadeSante.mp3"
+#     mainTranscribe(media_path)
 
-mainTranscribe(file_path)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process a filename.")
+    parser.add_argument("mediapath", type=str, help="The name of the file to process")
+    args = parser.parse_args()
+    mainTranscribe(args.mediapath)
+
 
 # liste l'ensemble des fichiers dans le dossier
 

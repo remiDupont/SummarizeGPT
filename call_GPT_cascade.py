@@ -1,11 +1,12 @@
 """ File to call chatGPT4 to make summary of a texte """
 
 from openai import OpenAI
-import datetime
 from call_GPT import read_file, call_chat_gpt, analyze_num_tokens, ma_prompt, save_file
 from constants import ma_prompt_cascade, ma_prompt_cascade_serie
 import glob
 import os
+import argparse
+
 
 client = OpenAI()
 
@@ -20,9 +21,8 @@ def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
     ]
 
     markdown_list = []
-    for i, file in enumerate(file_list):
+    for file in file_list:
         texte = read_file(file)
-
         gpt_input = (
             ma_prompt_cascade
             + " /n  < Début du texte >  : "
@@ -67,9 +67,9 @@ def process_stacked_markdown(final_file_path, model="gpt-4-1106-preview"):
     )
 
 
-def main():
+def main(filename):
     # lit les données
-    file_list = glob.glob("./transcriptions/EPR-28-S5-1-TriadeSante_*")
+    file_list = glob.glob(f"./transcriptions/{filename}*")
     file_list.sort()
 
     # process les données
@@ -78,5 +78,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    print("Done")
+    # EPR-28-S5-1-TriadeSante
+    parser = argparse.ArgumentParser(description="Process a filename.")
+    parser.add_argument("filename", type=str, help="The name of the file to process")
+    args = parser.parse_args()
+    print(f"Filename provided: {args.filename}")
+    main(args.filename)
