@@ -50,7 +50,9 @@ def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
     return final_file_path
 
 
-def process_stacked_markdown(final_file_path, model="gpt-4-1106-preview"):
+def process_stacked_markdown(
+    final_file_path, model="gpt-4-1106-preview", final_output_dir="./Résumes"
+):
     with open(final_file_path) as file:
         concatenated_markdown = file.read()
 
@@ -62,19 +64,25 @@ def process_stacked_markdown(final_file_path, model="gpt-4-1106-preview"):
     analyze_num_tokens(gpt_input, is_GPT35Turbo=False)
     final_markdown = call_chat_gpt(model=model, prompt=gpt_input)
     save_file(
-        f"./resultat_final/{final_file_path.split('/')[-1].replace('concat-','')}",
+        f"{final_output_dir}/{final_file_path.split('/')[-1].replace('concat-','')}",
         final_markdown,
     )
 
 
-def main(filename):
-    # lit les données
-    file_list = glob.glob(f"./transcriptions/{filename}*")
+def main(filename, final_output_dir):
+    # lit les scripts
+    file_list = glob.glob(f"./transcriptions/{filename}*.txt")
+    if len(file_list) > 1:  # match only subfiles
+        file_list = glob.glob(f"./transcriptions/{filename}_*.txt")
     file_list.sort()
 
     # process les données
     final_file_path = process_script_blocks(file_list, model="gpt-3.5-turbo-1106")
-    process_stacked_markdown(final_file_path, model="gpt-4-1106-preview")
+    process_stacked_markdown(
+        final_file_path=final_file_path,
+        model="gpt-4-1106-preview",
+        final_output_dir=final_output_dir,
+    )
 
 
 if __name__ == "__main__":
