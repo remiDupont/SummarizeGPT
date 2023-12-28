@@ -3,6 +3,7 @@ import call_GPT_cascade
 import argparse
 import os
 import constants
+import wisper
 
 
 def cretate_dir_if_not_exists(dir_path):
@@ -27,7 +28,7 @@ def get_args():
 def apply_pipeline(file_path, final_output_dir):
     extension = file_path.split(".")[-1].lower()
     if extension in constants.supported_extensions:
-        # wisper.mainTranscribe(file_path)
+        wisper.mainTranscribe(file_path)
         call_GPT_cascade.main(
             filename=file_path.split("/")[-1].split(".")[0],
             final_output_dir=final_output_dir,
