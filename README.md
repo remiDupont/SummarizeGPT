@@ -1,6 +1,6 @@
 # Media Summary pipeline
 
-This project mains a making a pipeline to takes detailes notes using chatGPT and Whisper. Whisper runs locally to save cost
+This project aims at making a pipeline to takes detailed notes using chatGPT and Whisper. Whisper runs locally to save cost
 
 ## Write a markdown resume into resultat_final folder : 
 
