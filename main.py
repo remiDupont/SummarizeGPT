@@ -45,6 +45,7 @@ if __name__ == "__main__":
 
     if os.path.isdir(args.input_dir_or_file):
         for file in os.listdir(args.input_dir_or_file):
+            print(f"Processing file: {file} in {args.input_dir_or_file}")
             apply_pipeline(
                 os.path.join(args.input_dir_or_file, file), args.final_output_dir
             )
