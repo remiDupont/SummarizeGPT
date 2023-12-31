@@ -29,10 +29,10 @@ def apply_pipeline(file_path, final_output_dir):
     extension = file_path.split(".")[-1].lower()
     if extension in constants.supported_extensions:
         wisper.mainTranscribe(file_path)
-        call_GPT_cascade.main(
-            filename=file_path.split("/")[-1].split(".")[0],
-            final_output_dir=final_output_dir,
-        )
+        # call_GPT_cascade.main(
+        #     filename=file_path.split("/")[-1].split(".")[0],
+        #     final_output_dir=final_output_dir,
+        # )
 
 
 if __name__ == "__main__":
