@@ -1,7 +1,9 @@
 # Media Summary pipeline
 
 This project aims at making a pipeline to takes detailed notes using chatGPT and Whisper. 
-Whisper runs locally (in GPY if possible) to save cost
+Whisper runs locally (in GPY if possible) to save cost. 
+
+Youtube URL --> Video --> Script --> Several block of texts --> several chatGPT 3.5 GPT --> 1 concatenated big Resume 
 
 ## 1) Setup
 
@@ -13,7 +15,7 @@ export OPENAI_KEY="sk-************************************"
 
 ### install the python env in conda 
 
-```bash 
+```bash
 conda env create -f environment.yml
 ```
 
