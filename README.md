@@ -7,6 +7,12 @@ Youtube URL --> Video --> Script --> Several block of texts --> several chatGPT 
 
 Works for any media (audio, video) not only youtube.
 
+<!-- ![Texte alternatif pour l'image](image.jpg) -->
+<p align="left">
+  <img src="image.jpg" alt="Texte alternatif" width="50%"/>
+</p>
+
+
 ## 1) Setup
 
 ### Openai key : 
