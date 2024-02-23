@@ -35,6 +35,8 @@ def extract_audio(file_path):
 
     # Écrire la transcription dans le fichier
     os.system(f"ffmpeg -i {file_path} -y -ab 160k -ac 2 -ar 44100 -vn {output_file}")
+    # os.system("ffmpeg -i {file_path} -y -c:a aac -b:a 128k -ac 2 -ar 44100 -vn {output_file}")
+
     os.remove(file_path)
     return output_file
 
@@ -57,7 +59,7 @@ def get_destination_name(file_path):
     # Obtenir le chemin de base et le nom du fichier sans extension
     base_path, _ = os.path.splitext(file_path)
     # Créer le nom du fichier de sortie avec l'extension .txt
-    return "./transcriptions/" + base_path.split("/")[-1] + ".txt"
+    return "./data/transcriptions/" + base_path.split("/")[-1] + ".txt"
 
 
 def save_transcription(file_path, transcription):
@@ -87,7 +89,6 @@ def mainTranscribe(file_path):
         print(f"Temps d'exécution: {end_time - start_time} secondes")
 
         # Afficher la transcription
-
         # Sauvegarder la transcription dans un fichier texte
         save_transcription(file_path, transcription)
 

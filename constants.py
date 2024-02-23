@@ -16,7 +16,7 @@ supported_extensions = [
 
 
 ma_prompt_cascade = f"""
-Tu es un assistant scientifique qui me prépare une note extrèmement detaillée au format markdown texte fourni.
+Tu es un assistant scientifique qui me prépare une note extrèmement detaillée, uniqument en francais, au format markdown texte fourni.
 Avec cette note, je comprends en detail les conseils donnés dans le texte et je peux tous les appliquer dans ma vie de tous les jours, sans exceptions.
 
 - Rédige un résumé très très détaillé, complet, approfondi.
@@ -49,13 +49,16 @@ Texte detaillé expliquant la sous partie 2 du texte en detail. Cette partie n'u
 ....
 
 Important !!!  La réponse comporte le maximum d'éléments du texte possible, et suit l'ordre chronologique du texte. Respecte bien le format ci-dessus.
-
+Même si le script est en anglais, la réponse doit être en français.
  """
 
+ma_prompt_cascade_serie2 = "Reorganise le texte en ne modifiant que les titres : tu dois impérativement garder le contenu exact de tous les paragraphes mais tu peux renommer les titres et bouger les paragraphes afin d'avoir un texte plus cohérents. Tous les paragraphes doivent être recopiées, sans AUCUNE modifications. ta réponse doit recopier l'ensemble des paragraphes, dans leur integralité.  < Début du markdown >  : "
 
-ma_prompt_cascade_serie = (
-    ma_prompt_cascade
-    + """   
-Un markdown de la partie précédente existe déja. Tu dois le compléter. Ta sortie doit donc être un markdown complétant le markdown précédent, sans le recopier. Voici le markdown précédent :
-"""
-)
+
+
+# ma_prompt_cascade_serie = (
+#     ma_prompt_cascade
+#     + """   
+# Un markdown de la partie précédente existe déja. Tu dois le compléter. Ta sortie doit donc être un markdown complétant le markdown précédent, sans le recopier. Voici le markdown précédent :
+# """
+# )

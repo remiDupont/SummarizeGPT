@@ -2,18 +2,18 @@
 
 from openai import OpenAI
 from call_GPT import read_file, call_chat_gpt, analyze_num_tokens, ma_prompt, save_file
-from constants import ma_prompt_cascade, ma_prompt_cascade_serie
+from constants import ma_prompt_cascade, ma_prompt_cascade_serie2
 import glob
 import os
 import argparse
 
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
 
 def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
     # remove all files in ./temp_markdown
-    temp_folder = "./temp_markdown"
+    temp_folder = "./data/temp_markdown"
     [
         os.remove(os.path.join(temp_folder, f))
         for f in os.listdir(temp_folder)
@@ -34,13 +34,13 @@ def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
         markdown_element = call_chat_gpt(model=model, prompt=gpt_input)
         markdown_list.append(markdown_element)
         save_file(
-            f"./temp_markdown/{model}-{ file.split('/')[-1].replace('.txt','.md') }",
+            f"./data/temp_markdown/{model}-{ file.split('/')[-1].replace('.txt','.md') }",
             markdown_element,
         )
 
     markdown_concat = " /n ".join(markdown_list)
     final_file_path = (
-        f"./temp_markdown/concat-{ file.split('/')[-1].replace('.txt','.md') }"
+        f"./data/temp_markdown/concat-{ file.split('/')[-1].replace('.txt','.md') }"
     )
 
     save_file(
@@ -57,7 +57,7 @@ def process_stacked_markdown(
         concatenated_markdown = file.read()
 
     gpt_input = (
-        "Reorganise le texte en ne modifiant que les titres : tu dois impérativement garder le contenu exact de tous les paragraphes mais tu peux renommer les titres et bouger les paragraphes afin d'avoir un texte plus cohérents. Tous les paragraphes doivent être recopiées, sans AUCUNE modifications. ta réponse doit recopier l'ensemble des paragraphes, dans leur integralité.  < Début du markdown >  : "
+        ma_prompt_cascade_serie2
         + concatenated_markdown
         + " /n < Fin du markdown >"
     )
@@ -71,9 +71,9 @@ def process_stacked_markdown(
 
 def main(filename, final_output_dir):
     # lit les scripts
-    file_list = glob.glob(f"./transcriptions/{filename}*.txt")
+    file_list = glob.glob(f"./data/transcriptions/{filename}*.txt")
     if len(file_list) > 1:  # match only subfiles
-        file_list = glob.glob(f"./transcriptions/{filename}_*.txt")
+        file_list = glob.glob(f"./data/transcriptions/{filename}_*.txt")
     file_list.sort()
 
     # process les données

@@ -2,8 +2,9 @@
 from token_counter import get_number_of_tokens
 from openai import OpenAI
 import datetime
+import os 
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
 file_name = "./transcriptions/EPR-28-S5-1-TriadeSante.txt"
 
@@ -19,10 +20,11 @@ def save_file(file_name, text):
 
 
 def call_chat_gpt(
-    model=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301"][2],
+    model=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301", "gpt-3.5-turbo-0125"][-2],
     prompt="",
 ):
     # max_tokens = 4096
+    model = "gpt-3.5-turbo-0125"
     completion = client.chat.completions.create(
         model=model,
         messages=[
@@ -32,7 +34,7 @@ def call_chat_gpt(
             },
         ],
         # temperature=0,
-        # max_tokens=max_tokens,
+        # max_tokens=1024,
         n=1,
     )
 
