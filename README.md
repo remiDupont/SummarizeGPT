@@ -3,7 +3,7 @@
 This project aims at making a pipeline to takes detailed notes using chatGPT and Whisper. 
 Whisper runs locally (in GPY if possible) to save cost. 
 
-Youtube URL --> Video --> Script --> Several block of texts --> several chatGPT 3.5 GPT --> 1 concatenated big Resume 
+Youtube URL --> Video --> Script --> Several block of texts --> several chatGPT 3.5 summary --> 1 concatenated big summary  
 
 ## 1) Setup
 
@@ -35,7 +35,7 @@ python download_from_youtube.py
 python main.py --input_dir_or_file /path/to/video_or_audio --final_output_dir /path_to_save_markdown 
 ```
 Note that the chatGPT prompts are in french, do not hesitate to modify them within the file `constants.py`
-## Notes about the number of token
+## Personal notes about the number of token
 
 book : 146.414  tokens
 Balex une heure : 6000
