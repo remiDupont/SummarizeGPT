@@ -9,19 +9,19 @@ Works for any media (audio, video) not only youtube.
 
 ## 1) Setup
 
-### openai key : 
+### Openai key : 
 In your bashrc file : 
 ```bash
 export OPENAI_KEY="sk-************************************"
 ```
 
-### install the python env in conda 
+### Install the python env in conda 
 
 ```bash
 conda env create -f environment.yml
 ```
 
-## 2) Downlaod videos from youtube
+## 2) Download videos from youtube
 
 Please note this pipeline can take as input any video / audio input, not only youtube video. 
 Enter your url in the variable `url_list` of download_from_youtube.py
