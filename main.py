@@ -25,9 +25,6 @@ def get_args():
         help="The name of the file to process",
         default="./Resumes",
     )
-    parser.add_argument(
-        "--keep_folders", help="keep folders structure", action='store_true'
-    )
     return parser.parse_args()
 
 
