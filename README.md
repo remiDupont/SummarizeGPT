@@ -5,6 +5,8 @@ Whisper runs locally (in GPY if possible) to save cost.
 
 Youtube URL --> Video --> Script --> Several block of texts --> several chatGPT 3.5 summary --> 1 concatenated big summary  
 
+Works for any media (audio, video) not only youtube.
+
 ## 1) Setup
 
 ### openai key : 
