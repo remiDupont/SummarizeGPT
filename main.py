@@ -23,7 +23,7 @@ def get_args():
         "--final_output_dir",
         type=str,
         help="The name of the file to process",
-        default="./Resumes",
+        default="./data/output/",
     )
     return parser.parse_args()
 
