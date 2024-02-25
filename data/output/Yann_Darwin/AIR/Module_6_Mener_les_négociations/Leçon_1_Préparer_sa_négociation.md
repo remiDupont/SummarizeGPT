@@ -1,0 +1,11 @@
+## Stratégies pour réussir une négociation immobilière
+
+Il est crucial de ne pas se laisser emporter par ses émotions lors d'une négociation. L'exemple de Jack, le personnage imaginaire qui pousse à l'achat impulsif, illustre parfaitement ce concept. Il est essentiel de garder son sang-froid et de se rappeler que personne ne force à acheter immédiatement. Il est recommandé de rester objectif et de ne pas se laisser influencer par ses émotions. En effet, prendre des décisions sous l'effet de l'excitation ou de la déprime peut mener à des choix regrettables.
+
+Avant de prendre une décision en négociation, il est primordial de se situer entre l'extrême positif et l'extrême négatif. En se plaçant dans une position médiane, on peut prendre des décisions rationnelles et objectives. Se laisser envahir par des émotions trop fortes, qu'elles soient positives ou négatives, peut conduire à des choix irrationnels. En ayant conscience de son état émotionnel, il est plus facile de prendre les bonnes décisions.
+
+Il est essentiel de savoir si le vendeur est négociable ou non. Certains vendeurs, comme ceux qui ont récemment acheté un bien et sont toujours en train de rembourser un prêt, ont une faible marge de négociation. En revanche, les vendeurs en difficulté, tels que ceux en situation de divorce, de mutation ou d'héritage, peuvent être plus enclins à négocier. Les héritages avec de multiples propriétaires peuvent cependant rendre la négociation complexe, car il est difficile de les mettre tous d'accord.
+
+Les vendeurs qui ne s'occupent pas correctement de leur bien immobilier, le laissant ainsi à l'abandon, sont généralement plus enclins à négocier. Même les propriétaires disposant d'un important patrimoine peuvent être ouverts à la négociation s'ils ne prêtent pas attention à la gestion de leur bien. Ces propriétaires peuvent avoir une marge de négociation plus grande en raison de leur manque d'implication dans la propriété. 
+
+En prenant en compte ces différents conseils et en se familiarisant avec les profils de vendeurs négociables et non négociables, il est possible d'accroître ses chances de réussir une négociation immobilière. En se concentrant sur une approche analytique et objective, il est possible de transformer une transaction moyenne en une opportunité très rentable.

@@ -7,7 +7,7 @@ import wisper
 from pathlib import Path
 
 
-def cretate_dir_if_not_exists(dir_path):
+def create_dir_if_not_exists(dir_path):
     """Create a directory if it does not exist."""
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
@@ -49,7 +49,7 @@ def apply_pipeline_to_file(file_path, final_output_dir):
 if __name__ == "__main__":
     args = get_args()
 
-    cretate_dir_if_not_exists(args.final_output_dir)
+    create_dir_if_not_exists(args.final_output_dir)
 
     if os.path.isfile(args.input_dir_or_file):
         apply_pipeline_to_file(args.input_dir_or_file, args.final_output_dir)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
                 print(f"Fichier: {fichier}, Sous-dossier: {sous_dossier}")
                 
                 final_output_dir = os.path.join(args.final_output_dir, sous_dossier)
-                cretate_dir_if_not_exists(final_output_dir)
+                create_dir_if_not_exists(final_output_dir)
 
                 apply_pipeline_to_file(
                     fichier._str, final_output_dir
