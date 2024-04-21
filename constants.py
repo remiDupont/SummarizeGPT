@@ -9,9 +9,10 @@ supported_extensions = [
     "ogg",
     "wav",
     "webm",
-    ".mp4",
-    ".mkv",
-    ".avi",
+    "mp4",
+    "mkv",
+    "avi",
+    "pdf"
 ]
 
 
