@@ -1,47 +1,29 @@
-## Pourquoi s'associer ?
+## Estimer son Budget
 
-### 1) Types d'associations:
-Il existe plusieurs types d'associations, chacune adaptée à des situations spécifiques. Par exemple, il y a les associations de court terme qui sont idéales pour des projets ponctuels. En revanche, pour des projets à long terme comme la création d'une entreprise, il est essentiel de choisir ses associés avec soin pour éviter les conflits.
+### 1) Estimer sa capacité d'endettement
 
-### 2) Importance du bon choix d'associés:
-Choisir le bon associé est crucial, car le mauvais choix peut conduire à des problèmes et parfois même à la fermeture de l'entreprise. Il est essentiel de trouver des associés qui partagent vos valeurs et objectifs à long terme pour assurer une collaboration harmonieuse.
+L'auteur souligne l'importance d'estimer son budget lors de recherches immobilières. Il explique que les banques sont enclines à prêter jusqu'à 33% du revenu disponible de l'emprunteur pour les remboursements mensuels. Par exemple, si le salaire net est de 2 000 euros, l'emprunteur peut rembourser jusqu'à 660 euros par mois. Cette règle des 33% est théorique et peut varier en fonction du profil de l'emprunteur.
 
-### 3) Avantages de l'association:
-L'association permet de lutter contre les biais cognitifs et les biais de confirmation. En ayant un associé, vous bénéficiez d'une vision critique et objective qui vous permet de prendre des décisions plus éclairées. De plus, un associé peut apporter une complémentarité de compétences et vous aider à gérer efficacement votre temps et vos ressources.
+Il aborde également l'impact des autres dettes dans le calcul, soulignant qu'elles réduisent la disponibilité pour l'emprunt immobilier. Il encourage à solder les dettes non productives pour optimiser la capacité d'endettement.
 
-## Comment s'associer ?
+### 2) Calcul du Budget Immobilier
 
-### 1) Trouver des associés avec des ambitions similaires :
-Plutôt que de chercher des associés complémentaires, il est recommandé de rechercher des personnes ayant des ambitions similaires aux vôtres. Cela permet d'éviter les conflits liés aux différences de rythme de travail et d'implication dans le projet.
+L'auteur propose de faire un calcul simple en prenant 33% du revenu mensuel pour estimer la mensualité disponible pour rembourser un prêt immobilier. Par exemple, avec un salaire de 2 000 euros, la mensualité disponible serait de 660 euros. En considérant un prêt sur 20 ans, le montant maximal du prêt serait d'environ 140 000 euros, en fonction du taux d'intérêt.
 
-### 2) Networking et relations personnelles:
-Pour trouver des associés, il est important de rencontrer des personnes lors d'événements de networking et de considérer les relations personnelles telles que les amis, la famille ou même le conjoint. Il est crucial de choisir des associés avec lesquels vous vous entendez bien et avec qui vous pouvez établir des règles claires pour séparer vie professionnelle et vie personnelle.
+Il suggère ensuite de multiplier ce montant par deux pour prendre en compte la négociation et les charges supplémentaires. Ainsi, dans cet exemple, le budget immobilier pourrait être estimé à environ 300 000 euros. Cela permet d'avoir une base solide pour rechercher des biens immobiliers dans sa gamme de prix.
 
-### 3) Réflexion sur les motivations:
-Un associé peut également être une source de motivation lors des moments difficiles et de prise de décisions importantes. L'association avec quelqu'un partageant des objectifs similaires peut vous aider à rester concentré sur vos objectifs à long terme.
+### 3) Utiliser les 70% de loyer
 
-## Association réussie
+L'auteur mentionne que les banques peuvent considérer jusqu'à 70% des loyers potentiels pour augmenter la capacité d'endettement de l'emprunteur. Cependant, il recommande de ne pas prendre en compte cette augmentation pour garantir une marge de sécurité dans le budget estimé.
 
-### 1) Clés d'une association réussie
+## Analyse détaillée du texte :
 
-Pour réussir une association, il est essentiel d'avoir un cadre clair et des terrains de jeu bien définis. Chaque associé doit avoir des responsabilités spécifiques et éviter de se chevaucher dans les domaines d'expertise. Par exemple, si un associé gère la négociation et l'autre la gestion des travaux dans une entreprise de marchand de biens, il est important de respecter les compétences de chacun pour éviter les frictions. Selon l'auteur, avoir une gouvernance claire pour déterminer qui est responsable de quoi est un prérequis nécessaire à toute association. Cette clarté permet à chaque associé de prendre ses responsabilités et d'éviter les malentendus sur les tâches à accomplir.
+### 1) Le principe de la sécurité financière
 
-### 2) Confiance et transparence
+L'auteur met en avant l'importance de ne pas se lancer dans des investissements immobiliers qui dépassent nos moyens. Il conseille de ne pas se laisser influencer par un budget maximum élevé mais de rester prudent en fonction de notre niveau d'expérience. Par exemple, si quelqu'un est débutant, il est conseillé de ne pas investir des sommes importantes pour éviter les mauvaises décisions. L'auteur compare cette prudence à jouer au poker, soulignant qu'il faut être à l'aise avec les sommes en jeu pour ne pas être affecté émotionnellement.
 
-Un autre élément crucial pour une association réussie est la confiance et la transparence entre les associés. Il est comparé à un mariage où il est essentiel de se dire les choses, même les mauvaises nouvelles, pour avancer et résoudre les problèmes ensemble. L'auteur insiste sur l'importance de partager les informations, même les plus difficiles, pour maintenir une relation saine et productive. Il recommande d'établir des règles de bonne conduite écrites pour favoriser une communication ouverte et honnête entre les associés.
+### 2) La relation avec les banques
 
-## Pacte d'associé
+L'auteur souligne que chaque banquier est différent et qu'il ne faut pas considérer un avis bancaire comme une vérité absolue. Il encourage à ne pas se limiter en se basant sur l'avis d'un seul banquier, car les politiques et les décisions peuvent varier d'une agence à une autre. Il est recommandé de rendre ses comptes attrayants pour les banquiers en mettant en avant l'épargne, car les banques sont sensibles à l'argent liquide. Dans ce cas, nommer les virements vers l'épargne et vivre en dessous de ses moyens sont des pratiques recommandées pour améliorer sa réputation bancaire et obtenir des financements plus facilement.
 
-### 1) Définition et importance du pacte d'associé
-
-Le pacte d'associé est un contrat complémentaire aux statuts de l'entreprise qui régule les relations entre les associés. Il est nécessaire pour gérer efficacement l'évolution des relations entre associés, notamment lors de conflits ou de changements dans l'entreprise. L'auteur souligne l'importance de rédiger un pacte d'associé, même si tout se déroule bien au départ, car il fournira des règles claires en cas de problème.
-
-### 2) Clauses et points clés à inclure dans un pacte d'associé
-
-L'auteur mentionne huit clauses essentielles à ne pas oublier lors de la rédaction d'un pacte d'associé. Il recommande de préciser la durée de validité du pacte, les modalités de résolution des conflits, les droits de vote et la gouvernance, le droit à l'information et au contrôle, la clause de non-concurrence, la répartition des bénéfices, la cession des titres et la préemption, ainsi que les dommages et intérêts en cas de manquement d'un associé. Ces clauses permettent de définir clairement les règles de fonctionnement de l'association et d'anticiper d'éventuels problèmes.
-
-### 3) Exemple de préemption et cession des titres
-
-L'auteur illustre l'importance de définir des règles de préemption et de cession des titres dans un pacte d'associé. Ces règles permettent aux associés d'avoir la priorité pour racheter les parts d'un associé sortant, que ce soit en cas de revente ou de décès. Cette précaution évite des situations délicates où les parts de l'entreprise pourraient tomber entre des mains non désirées, assurant ainsi la continuité et la cohérence de l'entreprise.
-
-En suivant les conseils et les exemples donnés dans le texte, il est possible d'établir une association solide et transparente, en évitant les conflits potentiels et en anticipant les situations délicates. La clarté des rôles, la communication ouverte et la rédaction d'un pacte d'associé détaillé sont des éléments clés pour assurer le succès et la pérennité d'une collaboration entrepreneuriale.
+En conclusion, l'auteur met en avant l'importance de la prudence et de la gestion financière responsable dans les investissements immobiliers, ainsi que le maintien de bonnes relations avec les banques en mettant en avant son épargne et en vivant en dessous de ses moyens. Ces conseils détaillés peuvent aider à éviter les mauvaises décisions et à obtenir des financements plus facilement pour des projets immobiliers réussis.
