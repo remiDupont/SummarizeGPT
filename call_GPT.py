@@ -24,7 +24,6 @@ def call_chat_gpt(
     prompt="",
 ):
     # max_tokens = 4096
-    model = "gpt-3.5-turbo-0125"
     completion = client.chat.completions.create(
         model=model,
         messages=[
