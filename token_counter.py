@@ -1,6 +1,7 @@
 from transformers import GPT2Tokenizer
 import PyPDF2
 
+
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 

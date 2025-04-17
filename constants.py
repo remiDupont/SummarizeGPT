@@ -16,7 +16,7 @@ supported_extensions = [
 ]
 quatre_o = {"model": "gpt-4.1-mini", "cost_per_token": 0.4/1e6} 
 
-max_tokens_per_chunk = 64000
+max_tokens_per_chunk = 64000*2
 
 base_model = quatre_o
 modele_agregation = quatre_o

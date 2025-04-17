@@ -12,7 +12,7 @@ import argparse
 client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
 
-def process_script_blocks(file_list):
+def process_script_blocks(file_list, final_output_dir=None):
     # remove all files in ./temp_markdown
     temp_folder = "./data/temp_markdown"
     [
@@ -30,7 +30,6 @@ def process_script_blocks(file_list):
             + texte
             + " /n < Fin du texte >"
         )
-
         analyze_num_tokens(gpt_input, cost_per_token=constants.base_model["cost_per_token"])
         markdown_element = call_chat_gpt(model=constants.base_model["model"], prompt=gpt_input)
         markdown_list.append(markdown_element)
@@ -40,8 +39,13 @@ def process_script_blocks(file_list):
         )
 
     markdown_concat = " /n ".join(markdown_list)
+    if final_output_dir is not None:
+        final_output_dir = f"{final_output_dir}/"
+    else:
+        final_output_dir = "./data/temp_markdown"
+
     final_file_path = (
-        f"./data/temp_markdown/concat-{ file.split('/')[-1].replace('.txt','.md') }"
+        f"{final_output_dir}/concat-{ file.split('/')[-1].replace('.txt','.md') }"
     )
 
     save_file(
@@ -78,7 +82,7 @@ def main(filename, final_output_dir):
     file_list.sort()
 
     # process les données
-    final_file_path = process_script_blocks(file_list)
+    final_file_path = process_script_blocks(file_list, final_output_dir)
     # process_stacked_markdown(
     #     final_file_path=final_file_path,
     #     model=constants.modele_agregation["model"],

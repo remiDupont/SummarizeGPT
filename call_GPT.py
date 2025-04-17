@@ -20,8 +20,8 @@ def save_file(file_name, text):
 
 
 def call_chat_gpt(
-    model, #=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301", "gpt-3.5-turbo-0125", "GPT-4.1-mini"][-1],
-    prompt="",
+    model, 
+    prompt,
 ):
     # max_tokens = 4096
     completion = client.chat.completions.create(
