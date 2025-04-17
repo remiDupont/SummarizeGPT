@@ -14,7 +14,8 @@ supported_extensions = [
     "avi",
     "pdf"
 ]
-quatre_o = {"model": "gpt-4.1-mini", "cost_per_token": 0.4/1e6} 
+quatre_o = {"model": "gpt-4.1", "cost_per_token": 2/1e6} 
+quatre_o_mini = {"model": "gpt-4.1-mini", "cost_per_token": 0.4/1e6} 
 
 max_tokens_per_chunk = 64000*2
 
