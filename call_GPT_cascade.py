@@ -3,6 +3,7 @@
 from openai import OpenAI
 from call_GPT import read_file, call_chat_gpt, analyze_num_tokens, ma_prompt, save_file
 from constants import ma_prompt_cascade, ma_prompt_cascade_serie2
+import constants
 import glob
 import os
 import argparse
@@ -11,7 +12,7 @@ import argparse
 client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
 
-def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
+def process_script_blocks(file_list):
     # remove all files in ./temp_markdown
     temp_folder = "./data/temp_markdown"
     [
@@ -30,11 +31,11 @@ def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
             + " /n < Fin du texte >"
         )
 
-        analyze_num_tokens(gpt_input, is_GPT35Turbo=model == "gpt-3.5-turbo-1106")
-        markdown_element = call_chat_gpt(model=model, prompt=gpt_input)
+        analyze_num_tokens(gpt_input, cost_per_token=constants.base_model["cost_per_token"])
+        markdown_element = call_chat_gpt(model=constants.base_model["model"], prompt=gpt_input)
         markdown_list.append(markdown_element)
         save_file(
-            f"./data/temp_markdown/{model}-{ file.split('/')[-1].replace('.txt','.md') }",
+            f"./data/temp_markdown/{constants.base_model["model"]}-{ file.split('/')[-1].replace('.txt','.md') }",
             markdown_element,
         )
 
@@ -51,7 +52,7 @@ def process_script_blocks(file_list, model="gpt-3.5-turbo-1106"):
 
 
 def process_stacked_markdown(
-    final_file_path, model="gpt-4-1106-preview", final_output_dir="./Résumes"
+    final_file_path, model, final_output_dir="./Résumes"
 ):
     with open(final_file_path) as file:
         concatenated_markdown = file.read()
@@ -61,7 +62,7 @@ def process_stacked_markdown(
         + concatenated_markdown
         + " /n < Fin du markdown >"
     )
-    analyze_num_tokens(gpt_input, is_GPT35Turbo=False)
+    analyze_num_tokens(gpt_input, cost_per_token=constants.modele_agregation["cost_per_token"])
     final_markdown = call_chat_gpt(model=model, prompt=gpt_input)
     save_file(
         f"{final_output_dir}/{final_file_path.split('/')[-1].replace('concat-','')}",
@@ -77,12 +78,12 @@ def main(filename, final_output_dir):
     file_list.sort()
 
     # process les données
-    final_file_path = process_script_blocks(file_list, model="gpt-3.5-turbo-1106")
-    process_stacked_markdown(
-        final_file_path=final_file_path,
-        model="gpt-4-1106-preview",
-        final_output_dir=final_output_dir,
-    )
+    final_file_path = process_script_blocks(file_list)
+    # process_stacked_markdown(
+    #     final_file_path=final_file_path,
+    #     model=constants.modele_agregation["model"],
+    #     final_output_dir=final_output_dir,
+    # )
 
 
 if __name__ == "__main__":

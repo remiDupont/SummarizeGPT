@@ -14,7 +14,12 @@ supported_extensions = [
     "avi",
     "pdf"
 ]
+quatre_o = {"model": "gpt-4.1-mini", "cost_per_token": 0.4/1e6} 
 
+max_tokens_per_chunk = 64000
+
+base_model = quatre_o
+modele_agregation = quatre_o
 
 ma_prompt_cascade = f"""
 Tu es un assistant scientifique qui me prépare une note extrèmement detaillée, uniqument en francais, au format markdown texte fourni.

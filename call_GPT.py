@@ -20,7 +20,7 @@ def save_file(file_name, text):
 
 
 def call_chat_gpt(
-    model=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301", "gpt-3.5-turbo-0125"][-2],
+    model, #=["gpt-4-32k", "gpt-4-0613", "gpt-4-1106-preview", "gpt-3.5-turbo-0301", "gpt-3.5-turbo-0125", "GPT-4.1-mini"][-1],
     prompt="",
 ):
     # max_tokens = 4096
@@ -40,12 +40,10 @@ def call_chat_gpt(
     return completion.choices[0].message.content
 
 
-def analyze_num_tokens(gpt_input, is_GPT35Turbo=False):
+def analyze_num_tokens(gpt_input, cost_per_token=0.000001):
     num_tok = get_number_of_tokens(gpt_input)
-    if is_GPT35Turbo:
-        cost = num_tok * 0.000001
-    else:
-        cost = num_tok * 0.00001
+    cost = num_tok * cost_per_token
+    
     print(f"Nombre de tokens: {num_tok}, estimated cost is {cost} $")
 
 

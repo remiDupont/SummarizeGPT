@@ -3,6 +3,7 @@ import os
 import time
 from token_counter import get_number_of_tokens
 import argparse
+import constants
 
 model_name = ["tiny", "small", "medium"][2]
 
@@ -108,14 +109,13 @@ def save_transcription(file_path, transcription):
     Save the transcription in a text file and split it if it is too long.
     """
     # Écrire la transcription dans le fichier
-    gpt4_max_tokens = 7900
-
+    max_tokens = constants.max_tokens_per_chunk 
     num_tokens = get_number_of_tokens(transcription)
     with open(get_destination_name(file_path), "w") as file:
         file.write(transcription)
 
-    if num_tokens > gpt4_max_tokens:
-        num_chunks = num_tokens // gpt4_max_tokens + 1
+    if num_tokens > max_tokens:
+        num_chunks = num_tokens // max_tokens + 1
         for i, segment in enumerate(couper_txt_en_segments(transcription, num_chunks)):
             with open(get_destination_name(file_path)[:-4] + f"_{i}.txt", "w") as file:
                 file.write(segment)
