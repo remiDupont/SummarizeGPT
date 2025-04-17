@@ -28,6 +28,7 @@ def get_args():
     return parser.parse_args()
 
 
+
 def apply_pipeline_to_file(file_path, final_output_dir):
     """Apply the pipeline to a file."""
 
